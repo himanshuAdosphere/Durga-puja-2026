@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ascending Coiled Serpent -->
+  <path d="M50 12 C44 12 40 16 40 22 C40 30 52 34 58 42 C64 50 62 60 52 64 C42 68 38 76 46 84 C52 90 62 88 66 80 C70 72 64 64 54 62" stroke-width="2.5"/>
+  <!-- Serpent Hood -->
+  <path d="M38 22 C32 20 30 14 36 10 C42 6 58 6 64 10 C70 14 68 20 62 22" stroke-width="2.2" fill="currentColor" fill-opacity="0.12"/>
+  <!-- Crown Jewel -->
+  <circle cx="50" cy="8" r="2" fill="currentColor"/>
+  <!-- Eye -->
+  <circle cx="46" cy="16" r="1.5" fill="currentColor"/>
+  <!-- Belly Scale Ribs -->
+  <line x1="44" y1="26" x2="48" y2="28" stroke-width="1.8"/>
+  <line x1="47" y1="32" x2="52" y2="34" stroke-width="1.8"/>
+  <line x1="52" y1="46" x2="57" y2="48" stroke-width="1.8"/>
+  <line x1="52" y1="56" x2="56" y2="58" stroke-width="1.8"/>
+  <!-- Forked Tongue -->
+  <path d="M38 18 L32 16 M38 18 L32 20" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Axe Shaft -->
+  <line x1="38" y1="12" x2="38" y2="90" stroke-width="3"/>
+  <circle cx="38" cy="10" r="2.5" fill="currentColor"/>
+  <circle cx="38" cy="92" r="2" fill="currentColor"/>
+  <!-- Crescent Blade -->
+  <path d="M38 24 C50 18 72 24 76 42 C72 60 50 66 38 60 Z" stroke-width="2.5" fill="currentColor" fill-opacity="0.12"/>
+  <!-- Inner Blade Accent -->
+  <path d="M38 32 C46 28 62 34 64 42 C62 50 46 54 38 52" stroke-width="1.5"/>
+  <!-- Blade Mount Rings -->
+  <line x1="34" y1="24" x2="42" y2="24" stroke-width="2.5"/>
+  <line x1="34" y1="60" x2="42" y2="60" stroke-width="2.5"/>
+  <!-- Rear Spike -->
+  <path d="M38 38 L24 42 L38 46 Z" stroke-width="1.8" fill="currentColor"/>
+</svg>

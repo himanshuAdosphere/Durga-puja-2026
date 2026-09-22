@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Mace Head (Bulbous ribbed crown) -->
+  <path d="M36 28 C36 18 42 12 50 12 C58 12 64 18 64 28 C64 36 58 42 50 44 C42 42 36 36 36 28 Z" stroke-width="2.5" fill="currentColor" fill-opacity="0.15"/>
+  <!-- Finial Top -->
+  <path d="M50 12 L50 6" stroke-width="2.5"/>
+  <circle cx="50" cy="5" r="2" fill="currentColor"/>
+  <!-- Flutes / Ribs on Head -->
+  <path d="M44 14 C42 22 42 34 45 42" stroke-width="1.8"/>
+  <path d="M56 14 C58 22 58 34 55 42" stroke-width="1.8"/>
+  <line x1="50" y1="12" x2="50" y2="44" stroke-width="1.5"/>
+  <!-- Neck Band -->
+  <line x1="43" y1="46" x2="57" y2="46" stroke-width="3"/>
+  <!-- Long Shaft -->
+  <line x1="50" y1="46" x2="50" y2="88" stroke-width="3"/>
+  <!-- Grip Bindings -->
+  <line x1="46" y1="60" x2="54" y2="60" stroke-width="2"/>
+  <line x1="46" y1="66" x2="54" y2="66" stroke-width="2"/>
+  <line x1="46" y1="72" x2="54" y2="72" stroke-width="2"/>
+  <!-- Base Knob -->
+  <circle cx="50" cy="90" r="3.5" fill="currentColor"/>
+</svg>

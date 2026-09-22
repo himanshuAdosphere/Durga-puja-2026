@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Recurve Bow Arc -->
+  <path d="M22 18 C38 28 42 42 36 50 C42 58 38 72 22 82" stroke-width="2.8"/>
+  <path d="M22 18 C18 16 16 12 18 10" stroke-width="2"/>
+  <path d="M22 82 C18 84 16 88 18 90" stroke-width="2"/>
+  <!-- Bowstring -->
+  <line x1="18" y1="10" x2="38" y2="50" stroke-width="1.5" stroke-dasharray="none"/>
+  <line x1="18" y1="90" x2="38" y2="50" stroke-width="1.5"/>
+  <!-- Central Arrow -->
+  <line x1="26" y1="50" x2="86" y2="50" stroke-width="2.5"/>
+  <!-- Arrowhead -->
+  <path d="M86 50 L74 44 L78 50 L74 56 Z" fill="currentColor" stroke-width="1.5"/>
+  <!-- Arrow Fletchings -->
+  <line x1="28" y1="46" x2="34" y2="50" stroke-width="1.8"/>
+  <line x1="28" y1="54" x2="34" y2="50" stroke-width="1.8"/>
+  <line x1="32" y1="46" x2="38" y2="50" stroke-width="1.8"/>
+  <line x1="32" y1="54" x2="38" y2="50" stroke-width="1.8"/>
+</svg>

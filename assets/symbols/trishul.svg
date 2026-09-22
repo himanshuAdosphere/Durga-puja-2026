@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Central Prong -->
+  <path d="M50 8 L55 28 L50 25 L45 28 Z" fill="currentColor" stroke-width="1.5"/>
+  <line x1="50" y1="25" x2="50" y2="92" stroke-width="3"/>
+  <!-- Left Prong -->
+  <path d="M50 42 C40 42 30 36 28 20 C28 17 32 21 34 26 C36 31 42 36 50 37" stroke-width="2.5"/>
+  <path d="M28 20 L24 23 L29 27 Z" fill="currentColor"/>
+  <!-- Right Prong -->
+  <path d="M50 42 C60 42 70 36 72 20 C72 17 68 21 66 26 C64 31 58 36 50 37" stroke-width="2.5"/>
+  <path d="M72 20 L76 23 L71 27 Z" fill="currentColor"/>
+  <!-- Base Crest & Grip Rings -->
+  <circle cx="50" cy="46" r="3" fill="currentColor"/>
+  <line x1="45" y1="58" x2="55" y2="58" stroke-width="2.5"/>
+  <line x1="46" y1="64" x2="54" y2="64" stroke-width="2.5"/>
+  <line x1="47" y1="88" x2="53" y2="88" stroke-width="3"/>
+  <circle cx="50" cy="92" r="2" fill="currentColor"/>
+</svg>

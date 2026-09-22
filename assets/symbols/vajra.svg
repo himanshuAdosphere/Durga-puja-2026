@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Central Orb -->
+  <circle cx="50" cy="50" r="7" stroke-width="2.5" fill="currentColor" fill-opacity="0.2"/>
+  <circle cx="50" cy="50" r="2.5" fill="currentColor"/>
+  <!-- Waist Rings -->
+  <line x1="42" y1="42" x2="58" y2="42" stroke-width="2.5"/>
+  <line x1="42" y1="58" x2="58" y2="58" stroke-width="2.5"/>
+  <!-- Top Spikes (3 prongs) -->
+  <line x1="50" y1="42" x2="50" y2="10" stroke-width="2.5"/>
+  <path d="M44 42 C40 32 38 24 50 10" stroke-width="2"/>
+  <path d="M56 42 C60 32 62 24 50 10" stroke-width="2"/>
+  <circle cx="50" cy="10" r="2" fill="currentColor"/>
+  <!-- Bottom Spikes (3 prongs) -->
+  <line x1="50" y1="58" x2="50" y2="90" stroke-width="2.5"/>
+  <path d="M44 58 C40 68 38 76 50 90" stroke-width="2"/>
+  <path d="M56 58 C60 68 62 76 50 90" stroke-width="2"/>
+  <circle cx="50" cy="90" r="2" fill="currentColor"/>
+  <!-- Energy Sparkles -->
+  <circle cx="28" cy="50" r="1.5" fill="currentColor"/>
+  <circle cx="72" cy="50" r="1.5" fill="currentColor"/>
+</svg>

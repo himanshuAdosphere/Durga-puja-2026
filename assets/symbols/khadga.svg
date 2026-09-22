@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Curved Blade -->
+  <path d="M32 86 L40 78 L78 26 C82 20 86 14 84 10 C80 12 74 16 68 20 L28 66 L22 74 Z" stroke-width="2.5" fill="currentColor" fill-opacity="0.12"/>
+  <!-- Blade Fuller / Center Line -->
+  <path d="M28 72 L70 20" stroke-width="1.5"/>
+  <path d="M72 16 L76 22" stroke-width="2"/>
+  <!-- Crossguard -->
+  <path d="M20 70 C22 74 26 78 30 82" stroke-width="3"/>
+  <circle cx="18" cy="70" r="2" fill="currentColor"/>
+  <circle cx="32" cy="84" r="2" fill="currentColor"/>
+  <!-- Hilt Grip -->
+  <line x1="20" y1="78" x2="12" y2="86" stroke-width="3.5"/>
+  <!-- Pommel -->
+  <circle cx="10" cy="88" r="3.5" fill="currentColor"/>
+</svg>

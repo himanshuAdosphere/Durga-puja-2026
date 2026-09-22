@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Center Petal -->
+  <path d="M50 20 C42 35 44 58 50 68 C56 58 58 35 50 20 Z" stroke-width="2.2" fill="currentColor" fill-opacity="0.15"/>
+  <!-- Left Inner Petal -->
+  <path d="M50 35 C38 42 32 55 42 68" stroke-width="2"/>
+  <!-- Right Inner Petal -->
+  <path d="M50 35 C62 42 68 55 58 68" stroke-width="2"/>
+  <!-- Left Outer Petal -->
+  <path d="M46 48 C28 54 18 66 34 76 C42 74 46 70 48 68" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+  <!-- Right Outer Petal -->
+  <path d="M54 48 C72 54 82 66 66 76 C58 74 54 70 52 68" stroke-width="2" fill="currentColor" fill-opacity="0.08"/>
+  <!-- Calyx Base / Stem -->
+  <path d="M42 74 C46 80 54 80 58 74" stroke-width="2.5"/>
+  <path d="M50 78 L50 90" stroke-width="2.5"/>
+  <!-- Drops of dew / nectar -->
+  <circle cx="50" cy="15" r="1.5" fill="currentColor"/>
+</svg>
