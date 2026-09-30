@@ -1,6 +1,6 @@
 /**
- * DURGA PUJA CONTENT CREATION COMPETITION 2026 - APPLICATION CONTROLLER
- * Official Initiative: Government of West Bengal
+ * DURGA PUJA WEST BENGAL — CREATORS CONTEST - APPLICATION CONTROLLER
+ * Official Initiative: Durga Puja West Bengal
  */
 
 const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbx_placeholder_endpoint/exec";
@@ -515,8 +515,8 @@ function initFormValidation() {
     if (!fields.category) return;
     const catVal = fields.category.value;
 
-    // 1. Category 1 Theme visibility
-    const isCat1 = catVal.includes('10 Hands') || catVal.startsWith('Category 01');
+    // 1. Category 1 (Dasha Shakti RTC) Theme visibility
+    const isCat1 = catVal.includes('Dasha Shakti') || catVal.includes('10 Hands') || catVal.startsWith('Category 01');
     if (fields.category1ThemeWrap) {
       if (isCat1) {
         fields.category1ThemeWrap.style.display = 'block';
@@ -530,11 +530,11 @@ function initFormValidation() {
       }
     }
 
-    // 2. Shankhadhwani Reel format enforcement
+    // 2. Shankhadhwani format rules (if format dropdown is present)
     const isShankha = catVal.includes('Shankhadhwani');
     if (fields.format && fields.optStatic) {
       if (isShankha) {
-        fields.format.value = 'Reel (30–60s)';
+        fields.format.value = 'Reel';
         fields.optStatic.disabled = true;
         if (fields.formatShankhaNote) fields.formatShankhaNote.style.display = 'block';
         validateField(fields.format, true);
@@ -571,7 +571,7 @@ function initFormValidation() {
     if (successOverlay) {
       if (successDynamicMsg) {
         const catText = categoryName ? `for <strong>${categoryName}</strong>` : '';
-        successDynamicMsg.innerHTML = `Thank you, <strong>${applicantName}</strong>! Your entry ${catText} has been officially recorded for the Government of West Bengal competition. Keep master uncompressed RAW files with EXIF data ready.`;
+        successDynamicMsg.innerHTML = `Thank you, <strong>${applicantName}</strong>! Your entry ${catText} has been officially recorded for the Durga Puja West Bengal — Creators Contest.`;
       }
       successOverlay.style.display = 'block';
       successOverlay.classList.add('active');
@@ -635,7 +635,7 @@ function initFormValidation() {
 
   if (fields.category) {
     fields.category.addEventListener('change', () => {
-      validateField(fields.category, fields.category.value !== '', 'Please select one of the four official categories.');
+      validateField(fields.category, fields.category.value !== '', 'Please select one of the three official categories.');
       handleCategoryChange();
     });
   }
@@ -781,26 +781,30 @@ function initFormValidation() {
 
     // Category validation
     if (!fields.category || !fields.category.value) {
-      validateField(fields.category, false, 'Please select one of the four official categories.');
+      validateField(fields.category, false, 'Please select one of the three official categories.');
       isValid = false;
     } else {
       validateField(fields.category, true);
     }
 
-    // Entry format validation
-    if (!fields.format || !fields.format.value) {
-      validateField(fields.format, false, 'Please specify your entry format.');
-      isValid = false;
-    } else {
-      validateField(fields.format, true);
+    // Entry format validation (if field present)
+    if (fields.format) {
+      if (!fields.format.value) {
+        validateField(fields.format, false, 'Please specify your entry format.');
+        isValid = false;
+      } else {
+        validateField(fields.format, true);
+      }
     }
 
-    // Location / Pandal validation
-    if (!fields.location || fields.location.value.trim().length < 2) {
-      validateField(fields.location, false, 'Please indicate where in West Bengal this was shot.');
-      isValid = false;
-    } else {
-      validateField(fields.location, true);
+    // Location / Pandal validation (if field present)
+    if (fields.location) {
+      if (fields.location.value.trim().length < 2) {
+        validateField(fields.location, false, 'Please indicate where in West Bengal this was shot.');
+        isValid = false;
+      } else {
+        validateField(fields.location, true);
+      }
     }
 
     // Public post URL validation (instagram.com / facebook.com)
@@ -811,12 +815,14 @@ function initFormValidation() {
       validateField(fields.reel, true);
     }
 
-    // Mandatory consent checkbox
-    if (!fields.terms || !fields.terms.checked) {
-      validateField(fields.terms, false, 'You must confirm this declaration to submit your entry.');
-      isValid = false;
-    } else {
-      validateField(fields.terms, true);
+    // Mandatory consent checkbox (if field present)
+    if (fields.terms) {
+      if (!fields.terms.checked) {
+        validateField(fields.terms, false, 'You must confirm this declaration to submit your entry.');
+        isValid = false;
+      } else {
+        validateField(fields.terms, true);
+      }
     }
 
     // Focus on first invalid field
@@ -833,7 +839,7 @@ function initFormValidation() {
 
     // Construct submission payload
     const age = calculateAgeOnOct1_2026(fields.dob.value);
-    const isCat1 = fields.category.value.includes('10 Hands') || fields.category.value.startsWith('Category 01');
+    const isCat1 = fields.category.value.includes('Dasha Shakti') || fields.category.value.includes('10 Hands') || fields.category.value.startsWith('Category 01');
 
     const submissionPayload = {
       fullName: fields.name.value.trim(),
@@ -845,13 +851,13 @@ function initFormValidation() {
       socialHandle: fields.handle.value.trim(),
       category: fields.category.value,
       category1Theme: (isCat1 && fields.theme) ? fields.theme.value : null,
-      entryFormat: fields.format.value,
-      locationPandal: fields.location.value.trim(),
+      entryFormat: fields.format ? fields.format.value : 'Reel',
+      locationPandal: fields.location ? fields.location.value.trim() : '',
       postUrl: fields.reel.value.trim(),
       isMinor: (age >= 16 && age <= 17),
       guardianName: (age >= 16 && age <= 17 && fields.guardianName) ? fields.guardianName.value.trim() : null,
       guardianConsent: (age >= 16 && age <= 17 && fields.guardianConsent) ? fields.guardianConsent.checked : null,
-      primaryConsentConfirmed: fields.terms.checked,
+      primaryConsentConfirmed: fields.terms ? fields.terms.checked : true,
       submittedAt: new Date().toISOString()
     };
 
@@ -947,7 +953,6 @@ function initTermsModal() {
 
 /**
  * Format any number into Indian Rupee currency format (en-IN)
- * e.g. 400000 -> ₹4,00,000
  */
 function formatRupees(amount) {
   const num = Number(amount);
@@ -994,19 +999,12 @@ function renderDataConfigElements(cfg) {
 }
 
 /**
- * Renders Top Announcement Bar according to exact spec:
- * "Government of West Bengal presents {officialName} • Window: 1–23 Oct 2026 • ₹4,00,000 in Prizes (12 Winners)"
+ * Renders Top Announcement Bar (disabled / safely no-op)
  */
 function renderAnnouncementBar(cfg) {
   const bar = document.getElementById('announcement-bar-text') || document.querySelector('.top-announcement-bar .announcement-text');
-  if (!bar || !cfg || !cfg.contest || !cfg.prizes) return;
-
-  const officialName = cfg.contest.officialName;
-  const windowLabel = cfg.contest.windowLabel || '1–23 Oct 2026';
-  const totalAmount = formatRupees(cfg.prizes.totalPool);
-  const winners = cfg.prizes.winners;
-
-  bar.innerHTML = `Government of West Bengal presents the <strong>${officialName}</strong> &bull; <strong>Window: <span data-config="contest.windowLabel">${windowLabel}</span></strong> &bull; <strong><span data-config="prizes.totalPool">${totalAmount}</span> in Prizes (<span data-config="prizes.winners">${winners}</span> Winners)</strong>`;
+  if (!bar) return;
+  bar.innerHTML = '';
 }
 
 /**
@@ -1017,21 +1015,9 @@ function renderCategoriesGrid(cfg) {
   if (!container || !cfg || !Array.isArray(cfg.categories) || cfg.categories.length === 0) return;
 
   container.innerHTML = cfg.categories.map((cat, index) => {
-    const badgeText = cat.badges ? cat.badges.join(' • ') : `Category ${cat.number}`;
-    const isSwachhata = cat.id === 'swachhata';
-    const isShankha = cat.id === 'shankhadhwani';
+    const aiNote = cat.note ? `<p class="category-ai-note" style="color: var(--alta-crimson); font-size: 0.85rem; font-weight: 600; margin-bottom: var(--space-sm);">Note: ${cat.note}</p>` : '';
 
-    const formatChipsMarkup = isShankha ? `
-      <div class="format-chips-wrap">
-        <span class="format-chip format-chip-video">
-          <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="23 7 16 12 23 17 23 7"/>
-            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-          </svg>
-          Video (20&ndash;60s)
-        </span>
-      </div>
-    ` : `
+    const formatChipsMarkup = `
       <div class="format-chips-wrap">
         <span class="format-chip">
           <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1040,18 +1026,8 @@ function renderCategoriesGrid(cfg) {
           </svg>
           Reel
         </span>
-        <span class="format-chip">
-          <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="3"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          Static Post
-        </span>
       </div>
     `;
-
-    const btnClass = isSwachhata ? 'btn btn-primary' : 'btn btn-outline';
 
     return `
       <article class="challenge-card scroll-reveal-scale stagger-${index + 1}" id="${cat.cardId}">
@@ -1061,8 +1037,9 @@ function renderCategoriesGrid(cfg) {
         <div class="challenge-card-body">
           <h3 class="challenge-card-title">${cat.title}</h3>
           <p class="challenge-card-desc">${cat.description}</p>
+          ${aiNote}
           ${formatChipsMarkup}
-          <a href="#submit" class="${btnClass}" data-challenge-target="${cat.ctaTarget || cat.title}">
+          <a href="#submit" class="btn btn-outline" data-challenge-target="${cat.ctaTarget || cat.title}">
             Enter Now &rarr;
           </a>
         </div>
@@ -1140,62 +1117,10 @@ function renderFaqList(cfg) {
 }
 
 /**
- * Renders Prize Breakdown Table (#prize-breakdown-table) dynamically from CONTEST_CONFIG.prizes
+ * Renders Prize Breakdown Table (disabled / safely no-op)
  */
 function renderPrizeTable(cfg) {
-  const tbody = document.getElementById('prize-breakdown-tbody');
-  const tfoot = document.getElementById('prize-breakdown-tfoot');
-  if (!tbody || !tfoot || !cfg || !cfg.prizes) return;
-
-  const perCategory = cfg.prizes.perCategory || [50000, 30000, 20000];
-  const p1 = Number(perCategory[0]) || 50000;
-  const p2 = Number(perCategory[1]) || 30000;
-  const p3 = Number(perCategory[2]) || 20000;
-  const catTotal = p1 + p2 + p3; // ₹1,00,000
-
-  const categories = (Array.isArray(cfg.categories) && cfg.categories.length > 0)
-    ? cfg.categories
-    : [
-        { number: '01', title: '10 Hands Thematic Content' },
-        { number: '02', title: 'Swachhata & Civic Consciousness' },
-        { number: '03', title: 'Shankhadhwani' },
-        { number: '04', title: 'Foods of Pujo' }
-      ];
-
-  const numCats = categories.length;
-  const grandP1 = p1 * numCats;
-  const grandP2 = p2 * numCats;
-  const grandP3 = p3 * numCats;
-  const grandTotal = (typeof cfg.prizes.totalPool === 'number')
-    ? cfg.prizes.totalPool
-    : (catTotal * numCats);
-
-  tbody.innerHTML = categories.map(cat => `
-    <tr>
-      <td class="td-category">
-        <span class="cat-num-pill">Cat ${cat.number}</span>
-        <strong class="cat-title-text">${cat.title}</strong>
-      </td>
-      <td class="td-prize td-p1">${formatRupees(p1)}</td>
-      <td class="td-prize td-p2">${formatRupees(p2)}</td>
-      <td class="td-prize td-p3">${formatRupees(p3)}</td>
-      <td class="td-total"><strong>${formatRupees(catTotal)}</strong></td>
-    </tr>
-  `).join('');
-
-  tfoot.innerHTML = `
-    <tr class="tr-grand-total">
-      <th scope="row" class="th-grand-title">
-        Grand Total (${cfg.prizes.winners || (numCats * 3)} Winners)
-      </th>
-      <td class="td-prize td-grand-p1"><strong>${formatRupees(grandP1)}</strong></td>
-      <td class="td-prize td-grand-p2"><strong>${formatRupees(grandP2)}</strong></td>
-      <td class="td-prize td-grand-p3"><strong>${formatRupees(grandP3)}</strong></td>
-      <td class="td-total td-grand-pool">
-        <strong class="highlight-grand-pool">${formatRupees(grandTotal)}</strong>
-      </td>
-    </tr>
-  `;
+  // Prize pool section removed per requirements
 }
 
 /**

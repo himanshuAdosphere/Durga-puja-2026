@@ -1,6 +1,6 @@
 /* ==========================================================================
-   DURGA PUJA CONTENT CREATION COMPETITION 2026 - MAIN STYLESHEET
-   Government of West Bengal
+   DURGA PUJA WEST BENGAL — CREATORS CONTEST - MAIN STYLESHEET
+   Durga Puja West Bengal
    ========================================================================== */
 
 @import url('design-tokens.css');
@@ -1524,11 +1524,12 @@ img {
 
 .challenges-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-xl);
+  width: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .challenges-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
