@@ -1,9 +1,9 @@
 /**
- * DASHA SHAKTI - The 10 Sacred Symbols & Contemporary Powers
- * Maa Durga's Ten Divine Weapons transformed into forces of modern Bengal.
+ * 10 HANDS THEMATIC SYMBOLS - The 10 Sacred Symbols & Contemporary Powers
+ * Maa Durga's Ten Divine Weapons transformed into forces of modern Bengal (Category 01 Theme).
  * Aligned with the official Durga Puja 2026 Contest Brief & Copy (22 September 2026).
  */
-const DASHA_SHAKTI_DATA = [
+const PUJO_SYMBOLS_DATA = [
   {
     id: 'trishul',
     num: '01',
@@ -15,7 +15,7 @@ const DASHA_SHAKTI_DATA = [
     sacredMeaning: 'Power over the three forces of nature; the force to overcome evil.',
     description: 'Power over the three forces of nature; the force to overcome evil. In modern Bengal, Trishul represents moral backbone, physical resilience, and the inner fortitude to champion justice.',
     svg: 'assets/symbols/trishul.svg',
-    accentColor: '#6B0028'
+    accentColor: '#A61A37'
   },
   {
     id: 'chakra',
@@ -28,7 +28,7 @@ const DASHA_SHAKTI_DATA = [
     sacredMeaning: 'Time, motion and cosmic order — always moving forward.',
     description: 'Time, motion and cosmic order — always moving forward. Chakra symbolizes continuous innovation, social transformation, and breaking boundaries while honoring eternal heritage.',
     svg: 'assets/symbols/chakra.svg',
-    accentColor: '#E87817'
+    accentColor: '#f99c1c'
   },
   {
     id: 'shankha',
@@ -41,7 +41,7 @@ const DASHA_SHAKTI_DATA = [
     sacredMeaning: 'The primordial sound of creation, positive energy and awakening.',
     description: 'The primordial sound of creation, positive energy and awakening. Shankha invokes purity and summons all souls to awaken — our clarion call for civic pride and cultural renaissance.',
     svg: 'assets/symbols/shankha.svg',
-    accentColor: '#6B0028'
+    accentColor: '#540000'
   },
   {
     id: 'khadga',
@@ -54,7 +54,7 @@ const DASHA_SHAKTI_DATA = [
     sacredMeaning: 'Wisdom and sharp intellect that cut through doubt and negativity.',
     description: 'Wisdom and sharp intellect that cut through doubt and negativity. Khadga embodies intellectual bravery, speaking truth with conviction, and standing up for what is right.',
     svg: 'assets/symbols/khadga.svg',
-    accentColor: '#E87817'
+    accentColor: '#A61A37'
   },
   {
     id: 'bow-arrow',
@@ -67,7 +67,7 @@ const DASHA_SHAKTI_DATA = [
     sacredMeaning: 'Focused energy, aim and the precision to achieve a goal.',
     description: 'Focused energy, aim and the precision to achieve a goal. Taut string and sharpened arrow denote supreme concentration, craftsmanship, and unwavering direction.',
     svg: 'assets/symbols/bow-arrow.svg',
-    accentColor: '#6B0028'
+    accentColor: '#004215'
   },
   {
     id: 'vajra',
@@ -80,7 +80,7 @@ const DASHA_SHAKTI_DATA = [
     sacredMeaning: 'Firmness of spirit, supreme force and unshakeable conviction.',
     description: 'Firmness of spirit, supreme force and unshakeable conviction. Indestructible like a diamond and decisive like lightning, Vajra is unshakeable self-belief and dignity.',
     svg: 'assets/symbols/vajra.svg',
-    accentColor: '#E87817'
+    accentColor: '#f99c1c'
   },
   {
     id: 'parashu',
@@ -93,49 +93,57 @@ const DASHA_SHAKTI_DATA = [
     sacredMeaning: 'Fearlessness and the strength to act against what is wrong.',
     description: 'Fearlessness and the strength to act against what is wrong. The sacred axe cleaves obstacles and represents resolute determination to finish what we begin.',
     svg: 'assets/symbols/parashu.svg',
-    accentColor: '#6B0028'
+    accentColor: '#540000'
   },
   {
-    id: 'padma',
+    id: 'bell',
+    aliasId: 'padma',
     num: '08',
-    symbol: 'Padma',
-    bengali: 'পদ্ম',
+    symbol: 'Ghanta (Bell)',
+    bengali: 'ঘণ্টা',
     power: 'Prosperity',
     bengaliPower: 'সমৃদ্ধি',
-    subtext: 'Purity & spiritual blossoming',
-    sacredMeaning: 'Purity, spiritual awakening and growth beyond material greed.',
-    description: 'Purity, spiritual awakening and growth beyond material greed. Rooted in mud yet blossoming in pristine radiance, the lotus stands for conscious growth and artistic abundance.',
-    svg: 'assets/symbols/padma.svg',
+    subtext: 'Divine resonance & auspicious awakening',
+    sacredMeaning: 'Sacred sound dispelling negativity and invoking auspicious grace.',
+    description: 'The sacred bell rings with divine vibrations that dispel negative energies and awaken auspicious consciousness. In modern Bengal, Ghanta symbolizes harmony, public celebration, and joyful prosperity.',
+    svg: 'assets/symbols/bell.svg',
     accentColor: '#E87817'
   },
   {
-    id: 'gada',
+    id: 'dhal',
+    aliasId: 'gada',
     num: '09',
-    symbol: 'Gada / Danda',
-    bengali: 'গদা',
+    symbol: 'Dhal (Shield)',
+    bengali: 'ঢাল',
     power: 'Protection',
-    bengaliPower: 'রক্ষা',
-    subtext: 'Steadfast support & loyalty',
-    sacredMeaning: 'Mental and spiritual strength, loyalty and support.',
-    description: 'Mental and spiritual strength, loyalty and support. The golden mace signifies civic responsibility, safeguarding our people, environment, and shared heritage.',
-    svg: 'assets/symbols/gada.svg',
-    accentColor: '#6B0028'
+    bengaliPower: 'সুরক্ষা',
+    subtext: 'Steadfast defense & civic safety',
+    sacredMeaning: 'Invulnerable protection of dharma and vulnerable communities.',
+    description: 'The divine shield guards against all hostility and malice. In contemporary Bengal, Dhal signifies civic defense, safeguarding cultural heritage, and standing as a protector for the people.',
+    svg: 'assets/symbols/dhal.svg',
+    accentColor: '#540000'
   },
   {
     id: 'nag',
     num: '10',
-    symbol: 'Nag',
-    bengali: 'নাগপাশ',
+    symbol: 'Nag (Snake)',
+    bengali: 'নাগ',
     power: 'Ambition',
     bengaliPower: 'উচ্চাকাঙ্ক্ষা',
     subtext: 'Vital energy ascending upward',
     sacredMeaning: 'Rising consciousness, vital energy and upward movement.',
     description: 'Rising consciousness, vital energy and upward movement. Nag channels concentrated latent potential into visionary ambition for youth and Bengal.',
     svg: 'assets/symbols/nag.svg',
-    accentColor: '#E87817'
+    accentColor: '#004215'
   }
 ];
 
+const DASHA_SHAKTI_DATA = PUJO_SYMBOLS_DATA;
+
+if (typeof window !== 'undefined') {
+  window.PUJO_SYMBOLS_DATA = PUJO_SYMBOLS_DATA;
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = DASHA_SHAKTI_DATA;
+  module.exports = PUJO_SYMBOLS_DATA;
 }

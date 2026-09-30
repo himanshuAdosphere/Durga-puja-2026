@@ -1,25 +1,44 @@
 /* ==========================================================================
-   DASHA SHAKTI - DESIGN SYSTEM & TOKENS
-   Campaign: 10 Hands. 10 Powers. One Bengal. (Durga Puja 2026)
+   DURGA PUJA CONTENT CREATION COMPETITION 2026 - DESIGN SYSTEM & TOKENS
+   Campaign: 10 Hands. 10 Powers. One Bengal. (Category 1 Theme)
    ========================================================================== */
 
 :root {
-  /* Core Cultural Palette */
-  --primary-burgundy: #6B0028;
-  --deep-burgundy: #430018;
-  --saffron-orange: #E87817;
-  --soft-cream: #F5EFD9;
-  --warm-off-white: #FFF9ED;
-  --soft-blush: #F5E5DD;
-  --text-dark: #321D1B;
-  --muted-text: #826E66;
-  --border-color: #DECDBD;
+  /* ==========================================================================
+     THE 5-COLOR BENGAL CULTURAL PALETTE
+     004215 (Bilva Green) | 540000 (Oxblood) | A61A37 (Alta Red) 
+     f99c1c (Marigold)    | ffe7b2 (Chandan Cream)
+     ========================================================================== */
+  --forest-green: #004215;         /* Bilva Patra / Dhani Sacred Green */
+  --oxblood-dark: #540000;         /* Imperial Oxblood / Heritage Maroon */
+  --alta-crimson: #A61A37;         /* Radiant Alta / Sindoor Scarlet */
+  --marigold-amber: #f99c1c;       /* Festive Marigold / Aarti Fire Amber */
+  --chandan-cream: #ffe7b2;        /* Silk Chandan Sandalwood / Luminous Ivory */
 
-  /* Saffron & Burgundy Accents */
-  --saffron-light: rgba(232, 120, 23, 0.12);
-  --saffron-glow: rgba(232, 120, 23, 0.28);
-  --burgundy-tint: rgba(107, 0, 40, 0.06);
-  --burgundy-glow: rgba(107, 0, 40, 0.25);
+  /* Semantic Theme Mappings */
+  --primary-burgundy: #540000;     /* Deep oxblood anchor for typography and structures */
+  --deep-burgundy: #380000;        /* Nocturnal oxblood for footer and dark stages */
+  --alta-red: #A61A37;             /* Primary vibrant action color */
+  --saffron-orange: #f99c1c;       /* Radiant festive amber */
+  --bilva-green: #004215;          /* Sacred ecological and prestige green */
+  --soft-cream: #FFF4DC;           /* Luminous soft sandalwood tint for body reading */
+  --cream-base: #ffe7b2;           /* Pure silk chandan token */
+  --warm-off-white: #FFFBF2;       /* High-clarity silk card surface */
+  --soft-blush: #F9EBE0;           /* Subtle warm terracotta highlight tint */
+  --text-dark: #2B0C06;            /* Deepest oxblood-charcoal for crisp readability */
+  --muted-text: #73544B;           /* Warm earth tone for secondary body text */
+  --border-color: rgba(84, 0, 0, 0.14); /* Refined oxblood hair-line border */
+  --border-gold: rgba(249, 156, 28, 0.35); /* Festive marigold accent border */
+
+  /* Saffron, Alta, Green & Oxblood Accents */
+  --saffron-light: rgba(249, 156, 28, 0.14);
+  --saffron-glow: rgba(249, 156, 28, 0.35);
+  --alta-light: rgba(166, 26, 55, 0.12);
+  --alta-glow: rgba(166, 26, 55, 0.32);
+  --green-light: rgba(0, 66, 21, 0.12);
+  --green-glow: rgba(0, 66, 21, 0.32);
+  --burgundy-tint: rgba(84, 0, 0, 0.08);
+  --burgundy-glow: rgba(84, 0, 0, 0.3);
 
   /* Typography Stacks */
   --font-editorial: 'Cormorant Garamond', 'Cinzel', 'Playfair Display', Georgia, serif;
@@ -60,27 +79,35 @@
   --radius-pill: 9999px;
 
   /* Elevation, Ambient Glow & Radiant Light Tokens */
-  --shadow-subtle: 0 4px 20px rgba(67, 0, 24, 0.05);
-  --shadow-card: 0 8px 30px rgba(67, 0, 24, 0.08);
-  --shadow-elevated: 0 16px 40px rgba(67, 0, 24, 0.12);
-  --shadow-glow-saffron: 0 0 28px rgba(232, 120, 23, 0.22);
+  --shadow-subtle: 0 4px 20px rgba(84, 0, 0, 0.05);
+  --shadow-card: 0 8px 30px rgba(84, 0, 0, 0.08);
+  --shadow-elevated: 0 16px 40px rgba(84, 0, 0, 0.14);
+  --shadow-glow-saffron: 0 0 28px rgba(249, 156, 28, 0.3);
   
-  --glow-saffron-sm: 0 0 16px rgba(232, 120, 23, 0.35);
-  --glow-saffron-md: 0 4px 24px rgba(232, 120, 23, 0.42), 0 0 40px rgba(232, 120, 23, 0.2);
-  --glow-saffron-lg: 0 8px 36px rgba(232, 120, 23, 0.5), 0 0 60px rgba(232, 120, 23, 0.28);
-  --glow-burgundy-sm: 0 4px 20px rgba(107, 0, 40, 0.25);
-  --glow-burgundy-md: 0 8px 32px rgba(67, 0, 24, 0.35), 0 0 35px rgba(107, 0, 40, 0.25);
-  --glow-ambient-gold: 0 0 40px rgba(255, 185, 80, 0.25);
+  --glow-saffron-sm: 0 0 16px rgba(249, 156, 28, 0.38);
+  --glow-saffron-md: 0 4px 24px rgba(249, 156, 28, 0.45), 0 0 40px rgba(249, 156, 28, 0.22);
+  --glow-saffron-lg: 0 8px 36px rgba(249, 156, 28, 0.55), 0 0 60px rgba(249, 156, 28, 0.3);
+  --glow-alta-sm: 0 4px 18px rgba(166, 26, 55, 0.32);
+  --glow-alta-md: 0 8px 30px rgba(166, 26, 55, 0.42), 0 0 35px rgba(166, 26, 55, 0.25);
+  --glow-green-sm: 0 4px 18px rgba(0, 66, 21, 0.32);
+  --glow-green-md: 0 8px 28px rgba(0, 66, 21, 0.42), 0 0 35px rgba(0, 66, 21, 0.2);
+  --glow-burgundy-sm: 0 4px 20px rgba(84, 0, 0, 0.25);
+  --glow-burgundy-md: 0 8px 32px rgba(84, 0, 0, 0.35), 0 0 35px rgba(84, 0, 0, 0.25);
+  --glow-ambient-gold: 0 0 40px rgba(249, 156, 28, 0.28);
 
   /* Luminous Button Gradients (No flat solid fills) */
-  --grad-burgundy-btn: linear-gradient(135deg, #870b38 0%, #6B0028 52%, #4a001b 100%);
-  --grad-burgundy-hover: linear-gradient(135deg, #a01045 0%, #7d0031 52%, #590022 100%);
-  --grad-saffron-btn: linear-gradient(135deg, #ff9436 0%, #E87817 55%, #cb5e04 100%);
-  --grad-saffron-hover: linear-gradient(135deg, #ffa652 0%, #f7821e 55%, #de6804 100%);
+  --grad-alta-btn: linear-gradient(135deg, #c72449 0%, #A61A37 52%, #7a0c22 100%);
+  --grad-alta-hover: linear-gradient(135deg, #db335a 0%, #b81c3e 52%, #8e1029 100%);
+  --grad-burgundy-btn: linear-gradient(135deg, #A61A37 0%, #7a0c22 52%, #540000 100%);
+  --grad-burgundy-hover: linear-gradient(135deg, #bd2143 0%, #8f0e28 52%, #680000 100%);
+  --grad-saffron-btn: linear-gradient(135deg, #ffb347 0%, #f99c1c 55%, #d67b04 100%);
+  --grad-saffron-hover: linear-gradient(135deg, #ffc066 0%, #faaa38 55%, #e98705 100%);
+  --grad-green-btn: linear-gradient(135deg, #0f692a 0%, #004215 55%, #002b0e 100%);
+  --grad-green-hover: linear-gradient(135deg, #187d35 0%, #00541b 55%, #003611 100%);
 
   /* Specular Edge Highlights */
-  --highlight-inner-top: inset 0 1px 1px rgba(255, 255, 255, 0.32);
-  --highlight-glass: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  --highlight-inner-top: inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  --highlight-glass: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
   /* Motion Timing */
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
