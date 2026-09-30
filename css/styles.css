@@ -211,9 +211,10 @@ img {
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
   cursor: pointer;
-  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-fast), background var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
   text-decoration: none;
   line-height: 1;
+  will-change: transform;
 }
 
 .btn:hover {
@@ -464,6 +465,7 @@ img {
   position: relative;
   padding: 0.5rem 0.5rem;
   white-space: nowrap;
+  transition: color var(--transition-fast);
 }
 
 .nav-link::after {
@@ -474,7 +476,7 @@ img {
   width: 0;
   height: 2px;
   background-color: var(--alta-crimson);
-  transition: width var(--transition-fast);
+  transition: width var(--transition-smooth);
 }
 
 .nav-link:hover {
@@ -802,14 +804,16 @@ img {
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: transform var(--transition-smooth), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  will-change: transform;
 }
 
 .hub-hand img {
   width: 30px;
   height: 30px;
   opacity: 0.88;
-  transition: transform 0.3s ease, opacity 0.25s ease, filter 0.25s ease;
+  transition: transform var(--transition-smooth), opacity var(--transition-fast), filter var(--transition-fast);
+  will-change: transform;
 }
 
 .hub-hand .hand-num {
@@ -1555,9 +1559,10 @@ img {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color var(--transition-fast), background var(--transition-fast);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-fast), background var(--transition-fast);
   position: relative;
   box-shadow: 0 8px 24px rgba(84, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  will-change: transform, box-shadow;
 }
 
 .card-specular-glare {
@@ -1695,7 +1700,8 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow);
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 .challenge-card:hover .challenge-media-wrap img {
@@ -2023,7 +2029,8 @@ img {
   padding: var(--space-xl) var(--space-lg);
   text-align: center;
   box-shadow: var(--shadow-subtle);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-fast);
+  will-change: transform, box-shadow;
 }
 
 .step-card:hover {
@@ -2923,6 +2930,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   box-shadow: 0 8px 28px rgba(249, 156, 28, 0.45), 0 0 35px rgba(249, 156, 28, 0.25), var(--highlight-inner-top);
   color: #fff;
   border-radius: var(--radius-pill);
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  will-change: transform;
 }
 
 .form-submit-btn:hover {
@@ -3768,8 +3777,9 @@ details[open].faq-item .faq-icon::after,
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color var(--transition-fast), background var(--transition-fast);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-fast), background var(--transition-fast);
   box-shadow: 0 10px 30px rgba(84, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  will-change: transform, box-shadow;
 }
 
 .reward-card:hover {
@@ -3816,7 +3826,8 @@ details[open].faq-item .faq-icon::after,
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-smooth);
+  will-change: transform;
 }
 
 .reward-card:hover .reward-icon-stage {
@@ -4019,10 +4030,13 @@ details[open].faq-item .faq-icon::after,
 .footer-nav-link {
   font-size: 0.9rem;
   color: rgba(255, 249, 237, 0.8);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
 }
 
 .footer-nav-link:hover {
   color: var(--saffron-orange);
+  transform: translateX(4px);
 }
 
 .footer-social h4 {
@@ -4065,13 +4079,15 @@ details[open].faq-item .faq-icon::after,
   align-items: center;
   justify-content: center;
   color: var(--warm-off-white);
-  transition: all var(--transition-fast);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  will-change: transform;
 }
 
 .social-btn:hover {
   background-color: var(--saffron-orange);
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(249, 156, 28, 0.35);
 }
 
 .footer-bottom {
