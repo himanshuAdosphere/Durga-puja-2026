@@ -1294,11 +1294,18 @@ function initFloatingCTA() {
 function initScrollAnimations() {
   const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, .fade-reveal');
 
+  function markRevealed(el) {
+    el.classList.add('revealed');
+    el.addEventListener('transitionend', () => {
+      el.style.transitionDelay = '0s';
+    }, { once: true });
+  }
+
   if ('IntersectionObserver' in window && revealElements.length > 0) {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
+          markRevealed(entry.target);
           obs.unobserve(entry.target);
         }
       });
@@ -1310,14 +1317,14 @@ function initScrollAnimations() {
     revealElements.forEach(el => {
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight && rect.bottom > 0) {
-        el.classList.add('revealed');
+        markRevealed(el);
       } else {
         observer.observe(el);
       }
     });
   } else {
     // Fallback: immediately reveal if no IntersectionObserver
-    revealElements.forEach(el => el.classList.add('revealed'));
+    revealElements.forEach(el => markRevealed(el));
   }
 }
 
