@@ -26,7 +26,7 @@ window.CONTEST_CONFIG = {
   },
 
   hero: {
-    body: "Celebrate Bengal's grandest festival across three creator categories — Dasha Shakti RTC, Swachh Pandal Neighbourhood, and Shankhadhwani.",
+    body: "Celebrate Bengal's grandest festival across three creator categories — Dasha Shakti Reel Competition, Swachh Pandal Neighbourhood, and Shankhadhwani.",
     primaryCta: "Submit Your Entry →",
     secondaryCta: "Explore Categories",
     stats: []
@@ -41,7 +41,7 @@ window.CONTEST_CONFIG = {
     {
       id: "thematic-content",
       number: "01",
-      title: "Dasha Shakti RTC",
+      title: "Dasha Shakti Reel Competition",
       focus: "10 powers of Maa Durga",
       description: "Participants make a reel celebrating one of the ten powers (hands) of Maa Durga, around Durga Puja.",
       formats: "Reel",
@@ -50,7 +50,7 @@ window.CONTEST_CONFIG = {
       cardId: "card-reel-challenge",
       image: "assets/images/reel-challenge.jpg",
       subTitle: "10 Powers of Maa Durga",
-      ctaTarget: "Dasha Shakti RTC"
+      ctaTarget: "Dasha Shakti Reel Competition"
     },
     {
       id: "swachhata",

@@ -41,7 +41,7 @@ export const CONTEST: ContestConfig = {
   categories: [
     {
       id: 1,
-      name: "Dasha Shakti RTC",
+      name: "Dasha Shakti Reel Competition",
       format: "Reel",
       description: "Participants make a reel celebrating one of the ten powers (hands) of Maa Durga, around Durga Puja."
     },

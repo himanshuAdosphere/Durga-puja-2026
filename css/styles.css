@@ -1949,8 +1949,10 @@ img {
    HOW TO PARTICIPATE (4 SIMPLE STEPS)
    ========================================================================== */
 .steps-section {
-  background-color: var(--soft-cream);
+  background-color: var(--warm-off-white);
   position: relative;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .steps-header {
@@ -2023,7 +2025,7 @@ img {
   z-index: 1;
   width: 100%;
   min-width: 0;
-  background-color: var(--warm-off-white);
+  background-color: #ffffff;
   border: 1.5px solid rgba(84, 0, 0, 0.12);
   border-radius: var(--radius-xl);
   padding: var(--space-xl) var(--space-lg);
@@ -3707,7 +3709,7 @@ details[open].faq-item .faq-icon::after,
    REWARDS SECTION (MORE THAN JUST RECOGNITION)
    ========================================================================== */
 .rewards-section {
-  background-color: var(--warm-off-white);
+  background-color: var(--soft-cream);
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--border-color);
