@@ -3698,14 +3698,11 @@ details[open].faq-item .faq-icon::after,
    REWARDS SECTION (MORE THAN JUST RECOGNITION)
    ========================================================================== */
 .rewards-section {
-  background: 
-    radial-gradient(ellipse at 20% 20%, rgba(249, 156, 28, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(166, 26, 55, 0.06) 0%, transparent 50%),
-    var(--chandan-cream);
+  background-color: var(--warm-off-white);
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(84, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(84, 0, 0, 0.12);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .rewards-header {
